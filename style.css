@@ -88,3 +88,30 @@ input, textarea {
   background: #005582;
   transform: scale(1.05);
 }
+/* Mobile responsive */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+}
