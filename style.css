@@ -128,3 +128,37 @@ input, textarea {
 .profile-pic:hover {
   transform: scale(1.1);
 }
+.photo-hidden {
+  display: none;
+}
+
+.photo-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.photo-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.photo-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Optional scrollbar styling */
+.photo-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.photo-container::-webkit-scrollbar-thumb {
+  background: #00ff9f;
+  border-radius: 10px;
+}

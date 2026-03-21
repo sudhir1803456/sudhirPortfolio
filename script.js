@@ -50,3 +50,19 @@ form.addEventListener("submit", function (e) {
 
     });
 });
+const photoBtn = document.getElementById("photoBtn");
+const gallery = document.getElementById("photoGallery");
+
+let isPhotoOpen = false;
+
+photoBtn.addEventListener("click", () => {
+  if (!isPhotoOpen) {
+    gallery.classList.remove("photo-hidden");
+    photoBtn.innerText = "Hide Photos";
+    isPhotoOpen = true;
+  } else {
+    gallery.classList.add("photo-hidden");
+    photoBtn.innerText = "See Photos";
+    isPhotoOpen = false;
+  }
+});
