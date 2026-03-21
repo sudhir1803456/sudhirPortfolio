@@ -66,3 +66,27 @@ photoBtn.addEventListener("click", () => {
     isPhotoOpen = false;
   }
 });
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeModal = document.getElementById("closeModal");
+
+const images = document.querySelectorAll(".photo-container img");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  });
+});
+
+// Close button
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Close when clicking outside image
+modal.addEventListener("click", (e) => {
+  if (e.target !== modalImg) {
+    modal.style.display = "none";
+  }
+});
